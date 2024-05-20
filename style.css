@@ -129,6 +129,22 @@ nav .nav-links a.selected{
     padding: 40px 290px 0;
 }
 
+.details h3,a{
+    display: inline-block;
+}
+
+.details a{
+    padding: 10px 20px;
+    background: #303f9f;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 35px;
+}
+
 .featured .item,
 .works-list .item{
     display: flex;
