@@ -102,62 +102,7 @@ nav .nav-links a.selected{
     border-radius: 140px;
 }
 
-.recent{
-    padding: 60px 148px;
-    background-color: #dbedf2;
-}
 
-.recent .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.recent .header h4,
-.separator h4{
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.recent .header a{
-    color: #303f9f;
-}
-
-.recent .posts{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.recent .posts .post-item{
-    background-color: #fff;
-    padding: 24px;
-    width: 460px;
-}
-
-.recent .posts .post-item h3,
-.content .post-list .post-item h3{
-    font-size: 26px;
-    margin-bottom: 18px;
-}
-
-.recent .posts .post-item .info,
-.content .post-list .post-item .info{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.recent .posts .post-item .info h5,
-.content .post-list .post-item h5{
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.recent .posts .post-item p{
-    width: 400px;
-}
 
 .separator{
     padding: 40px 148px 0;
@@ -165,6 +110,19 @@ nav .nav-links a.selected{
 
 .separator h4{
     margin-bottom: 30px;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.separator a{
+    padding: 10px 30px;
+    background: #303f9f;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .featured{
@@ -597,5 +555,8 @@ footer p{
         width: 100%;
         height: auto;
     }
-
+    
+    .separator h4,a{
+        display: block;
+    }
 }
