@@ -342,6 +342,30 @@ footer p{
     font-size: 14px;
 }
 
+.proof{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 35% 65%;    
+}
+
+.img-proof{
+    grid-column: 1;
+    height: 300px;
+    max-width: 100%;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.proof-desc{
+    width: 100%;
+    grid-column: 2;
+    padding: 10px 40px;
+    font-size: 20px;
+}
+
+
+
 @media screen and (max-width: 1400px) {
     
     nav{
