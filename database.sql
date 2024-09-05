@@ -46,10 +46,10 @@ CREATE TABLE Specifies(
 
 /* Peuplement de la BD */
 /* Items & Langages */
-INSERT INTO Items (id, title, yearBadge, summary)
-VALUES (1, 'Lecteur de diaporamas', 2024, "Ce projet consistait à réaliser le développement d\'un lecteur de diaporamas, par groupes de 3, selon un sujet fourni par nos enseignants. Ce projet incluait de la gestion d\'UI et de bases de données.", "assets/item-1.png"),
+INSERT INTO Items (id, title, yearBadge, summary, coverURL)
+VALUES (1, 'Lecteur de diaporamas', 2024, "Ce projet consistait à réaliser le développement d'un lecteur de diaporamas, par groupes de 3, selon un sujet fourni par nos enseignants. Ce projet incluait de la gestion d\'UI et de bases de données.", "assets/item-1.png"),
        (2, 'Exploitation de graphes', 24, 'Dans ce projet universitaire, nous devions en binômes trier des données de graphes puis les exploiter et enfin, les représenter sur une carte.', "assets/item-2.png"),
-       (3, "Installation d\'un réseau", 24, "Lors de ce projet universitaire, nous devions mettre en place le réseau d\'une entreprise selon des contraintes données par le sujet.", "assets/item-3.png");
+       (3, "Installation d'un réseau", 24, "Lors de ce projet universitaire, nous devions mettre en place le réseau d'une entreprise selon des contraintes données par le sujet.", "assets/item-3.png");
 
 INSERT INTO Langages (id, wording, mastering) 
 VALUES (1, 'C++', 85), 
