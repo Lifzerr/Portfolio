@@ -402,6 +402,45 @@ footer p{
     transition: background 0.3s ease;
 }
 
+#themeChanger{
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    #barContainer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    #bar {
+        display: flex;
+        height: 25px;
+        width: 80px;
+        background-color: var(--main-color);
+        border-radius: 13px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #circle{
+        height: 22px;
+        width: 22px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        margin-left: -55px;
+        transition: all ease-in-out 0.3s;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     
     nav{

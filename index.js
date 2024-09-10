@@ -1,5 +1,5 @@
 let btnScrollTop = document.querySelector('.scroll-top-btn');
-
+let btnChangeTheme = document.getElementById('themeChanger');
 
 // Ne faire apparaître le bouton de scroll que si c'est utile
 btnScrollTop.style.display = 'none';
@@ -19,3 +19,56 @@ btnScrollTop.addEventListener('click', () => {
   });
 });
 
+
+
+/*** Events Bouton de thèmes ***/
+btnChangeTheme.addEventListener('click', () => {
+  let circle = document.getElementById('circle');
+  console.log('entré');
+  if(circle.classList.contains('clear')){
+    circle.style.marginLeft = '55px';
+    circle.classList.remove('clear');
+
+    // Changer les couleurs de tous les élements
+    changeColorsTo('dark');
+  }
+  else{
+    circle.style.marginLeft = '-55px';
+    circle.classList.add('clear');
+
+    // Changer les couleurs de tous les élements
+    changeColorsTo('light');
+  }
+});
+
+
+
+
+
+/*** Fonction de changement de couleurs des variables ***/
+function changeColorsTo(theme){
+  var root = document.querySelector(':root');
+
+  console.log(theme);
+
+  if(theme === 'dark'){
+    root.style.setProperty('--primary-color', '#303f9f');
+    root.style.setProperty('--main-color', '#424242');
+    root.style.setProperty('--font-color', '#ffffff');
+    root.style.setProperty('--secondary-font-color', '#bdbdbd');
+    root.style.setProperty('--main-hover-btn-color', '#1565c0');
+    root.style.setProperty('--about-background-color', '#263238');
+    root.style.setProperty('--main-logo-color', '#ffffff');
+    root.style.setProperty('--main-border-color', '#757575');
+  }
+  else{
+    root.style.setProperty('--primary-color', '#303f9f');
+    root.style.setProperty('--main-color', '#fff');
+    root.style.setProperty('--font-color', '#000');
+    root.style.setProperty('--secondary-font-color', '#8695a4');
+    root.style.setProperty('--main-hover-btn-color', '#1a237e');
+    root.style.setProperty('--about-background-color', '#dbedf2');
+    root.style.setProperty('--main-logo-color', '#3e3e3e');
+    root.style.setProperty('--main-border-color', '#e0e0e0');
+  }
+}
