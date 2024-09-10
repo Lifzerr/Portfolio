@@ -19,8 +19,6 @@ btnScrollTop.addEventListener('click', () => {
   });
 });
 
-
-
 /*** Events Bouton de thèmes ***/
 btnChangeTheme.addEventListener('click', () => {
   let circle = document.getElementById('circle');
@@ -52,14 +50,15 @@ function changeColorsTo(theme){
   console.log(theme);
 
   if(theme === 'dark'){
-    root.style.setProperty('--primary-color', '#303f9f');
-    root.style.setProperty('--main-color', '#424242');
-    root.style.setProperty('--font-color', '#ffffff');
+    root.style.setProperty('--primary-color', '#000');
+    root.style.setProperty('--main-color', '#0a0f25');
+    root.style.setProperty('--font-color', '#fff');
     root.style.setProperty('--secondary-font-color', '#bdbdbd');
     root.style.setProperty('--main-hover-btn-color', '#1565c0');
     root.style.setProperty('--about-background-color', '#263238');
     root.style.setProperty('--main-logo-color', '#ffffff');
     root.style.setProperty('--main-border-color', '#757575');
+    root.style.setProperty('--buttons-font-color', '#fff');
   }
   else{
     root.style.setProperty('--primary-color', '#303f9f');
@@ -70,5 +69,6 @@ function changeColorsTo(theme){
     root.style.setProperty('--about-background-color', '#dbedf2');
     root.style.setProperty('--main-logo-color', '#3e3e3e');
     root.style.setProperty('--main-border-color', '#e0e0e0');
+    root.style.setProperty('--buttons-font-color', '#000');
   }
 }
