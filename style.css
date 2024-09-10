@@ -11,6 +11,16 @@
     --main-border-color: #e0e0e0;
 }
 
+/* Changer la scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--secondary-font-color) ;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--main-color);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -40,7 +50,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     font-weight: 600;
-    position: fixed;
 }
 
 nav .logo{
@@ -381,7 +390,17 @@ footer p{
     font-size: 20px;
 }
 
-
+.scroll-top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
 @media screen and (max-width: 1400px) {
     
@@ -623,3 +642,5 @@ footer p{
         display: block;
     }
 }
+
+
