@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
 
+:root{
+    --primary-color: #303f9f;
+    --background-color: #fff;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
+}
+
+body{
+    background-color: var(--background-color);
 }
 
 a{
@@ -56,7 +65,7 @@ nav .nav-links a{
 
 nav .nav-links a:hover,
 nav .nav-links a.selected{
-    color: #303f9f;
+    color: var(--primary-color);
 }
 
 .main {
@@ -82,7 +91,7 @@ nav .nav-links a.selected{
 .main .info button,
 .content .post-list .post-item .buttons button{
     padding: 10px 30px;
-    background: #303f9f;
+    background: var(--primary-color);
     border: none;
     color: #fff;
     font-size: 16px;
@@ -116,7 +125,7 @@ nav .nav-links a.selected{
 
 .separator a{
     padding: 10px 30px;
-    background: #303f9f;
+    background: var(--primary-color);
     border: none;
     color: #fff;
     font-size: 16px;
@@ -135,7 +144,7 @@ nav .nav-links a.selected{
 
 .details a{
     padding: 10px 20px;
-    background: #303f9f;
+    background: var(--primary-color);
     border: none;
     color: #fff;
     font-size: 12px;
@@ -178,7 +187,7 @@ nav .nav-links a.selected{
 .featured .item .details .item-info .year-badge,
 .works-list .item .details .item-info .year-badge,
 .content .work-info .year-badge{
-    background-color: #303f9f;
+    background-color: var(--primary-color);
     padding: 2px 14px;
     color: #fff;
     border-radius: 16px;
@@ -220,7 +229,7 @@ footer .socials i{
 }
 
 footer .socials i:hover{
-    color: #303f9f;
+    color: var(--primary-color);
 }
 
 footer p{
@@ -303,7 +312,7 @@ footer p{
 }
 
 .content .post-list .post-item .buttons i:hover{
-    color: #303f9f;
+    color: var(--primary-color);
 }
 
 .content .container{
