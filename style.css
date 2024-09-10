@@ -2,7 +2,13 @@
 
 :root{
     --primary-color: #303f9f;
-    --background-color: #fff;
+    --main-color: #fff;
+    --font-color: #000;
+    --secondary-font-color: #8695a4;
+    --main-hover-btn-color : #1a237e;
+    --about-background-color: #dbedf2;
+    --main-logo-color: #3e3e3e;
+    --main-border-color: #e0e0e0;
 }
 
 *{
@@ -13,12 +19,12 @@
 }
 
 body{
-    background-color: var(--background-color);
+    background-color: var(--main-color);
 }
 
 a{
     text-decoration: none;
-    color: #000;
+    color: var(--font-color);
 }
 
 img{
@@ -29,11 +35,12 @@ img{
 
 nav{
     padding: 20px 148px;
-    background-color: #fff;
+    background-color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 600;
+    position: fixed;
 }
 
 nav .logo{
@@ -50,7 +57,7 @@ nav .logo img{
 
 nav .logo a{
     font-size: 15px;
-    color: #3e3e3e;
+    color: var(--main-logo-color);
     font-weight: bold;
 }
 
@@ -93,7 +100,7 @@ nav .nav-links a.selected{
     padding: 10px 30px;
     background: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--main-color);
     font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
@@ -102,7 +109,7 @@ nav .nav-links a.selected{
 
 .main .info button:hover,
 .content .post-list .post-item .buttons button:hover{
-    background: #1a237e;
+    background: var(main-hover-btn-color);
 }
 
 .main img{
@@ -127,7 +134,7 @@ nav .nav-links a.selected{
     padding: 10px 30px;
     background: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--main-color);
     font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
@@ -146,7 +153,7 @@ nav .nav-links a.selected{
     padding: 10px 20px;
     background: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--main-color);
     font-size: 12px;
     border-radius: 12px;
     cursor: pointer;
@@ -160,7 +167,7 @@ nav .nav-links a.selected{
     gap: 30px;
     margin-bottom: 30px;
     padding-bottom: 30px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--main-border-color);
 }
 
 .featured .item img,
@@ -189,7 +196,7 @@ nav .nav-links a.selected{
 .content .work-info .year-badge{
     background-color: var(--primary-color);
     padding: 2px 14px;
-    color: #fff;
+    color: var(--main-color);
     border-radius: 16px;
     font-size: 14px;
     font-weight: bold;
@@ -197,7 +204,7 @@ nav .nav-links a.selected{
 
 .featured .item .details .item-info h4,
 .works-list .item .details .item-info h4{
-    color: #8695a4;
+    color: var(--secondary-font-color);
     font-size: 18px;
 }
 
@@ -257,7 +264,7 @@ footer p{
 }
 
 .content .work-info .category{
-    color: #8695a4;
+    color: var(--secondary-font-color);
     font-size: 18px;
 }
 
@@ -286,7 +293,7 @@ footer p{
 }
 
 .content .post-list .post-item{
-    background-color: #dbedf2;
+    background-color: var(--about-background-color);
     padding: 24px;
     width: 960px;
     border-radius: 10px;
@@ -316,7 +323,7 @@ footer p{
 }
 
 .content .container{
-    background-color: #dbedf2;
+    background-color: var(--about-background-color);
     padding: 30px;
     display: flex;
     align-items: center;
