@@ -33,7 +33,7 @@ body{
     background-color: var(--main-color);
 }
 
-h1, h2, h3, p, btn{
+h1, h2, h3, p, btn, a{
     color: var(--font-color);
 }
 
