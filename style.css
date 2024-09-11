@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
 
+:root{
+    --primary-color: #303f9f;
+    --main-color: #fff;
+    --font-color: #000;
+    --secondary-font-color: #8695a4;
+    --main-hover-btn-color : #1a237e;
+    --about-background-color: #dbedf2;
+    --main-logo-color: #3e3e3e;
+    --main-border-color: #e0e0e0;
+    --buttons-font-color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+}
+
+/* Track (fond de la scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 50%;
+}
+
+/* Handle (barre de défilement) */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+}
+
+/* Handle au hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 50%; 
+}
+
+/* Optionnel: styles pour Firefox */
+* {
+    scrollbar-width: thin;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,9 +47,18 @@
     font-family: 'Heebo', sans-serif;
 }
 
+body{
+    background-color: var(--main-color);
+    overflow-y: scroll;
+}
+
+h1, h2, h3, p, btn{
+    color: var(--buttons-font-color);
+}
+
 a{
     text-decoration: none;
-    color: #000;
+    color: var(--buttons-font-color);
 }
 
 img{
@@ -20,7 +69,7 @@ img{
 
 nav{
     padding: 20px 148px;
-    background-color: #fff;
+    background-color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +90,7 @@ nav .logo img{
 
 nav .logo a{
     font-size: 15px;
-    color: #3e3e3e;
+    color: var(--main-logo-color);
     font-weight: bold;
 }
 
@@ -56,7 +105,7 @@ nav .nav-links a{
 
 nav .nav-links a:hover,
 nav .nav-links a.selected{
-    color: #303f9f;
+    color: var(--primary-color);
 }
 
 .main {
@@ -82,9 +131,9 @@ nav .nav-links a.selected{
 .main .info button,
 .content .post-list .post-item .buttons button{
     padding: 10px 30px;
-    background: #303f9f;
+    background: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--buttons-font-color);
     font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
@@ -93,7 +142,7 @@ nav .nav-links a.selected{
 
 .main .info button:hover,
 .content .post-list .post-item .buttons button:hover{
-    background: #1a237e;
+    background: var(main-hover-btn-color);
 }
 
 .main img{
@@ -106,9 +155,10 @@ nav .nav-links a.selected{
 
 .separator{
     padding: 40px 148px 0;
+    width: 100%;
 }
 
-.separator h4{
+.separator h3{
     margin-bottom: 30px;
     display: inline-block;
     margin-right: 40px;
@@ -116,9 +166,9 @@ nav .nav-links a.selected{
 
 .separator a{
     padding: 10px 30px;
-    background: #303f9f;
+    background: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--buttons-font-color);
     font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
@@ -135,9 +185,9 @@ nav .nav-links a.selected{
 
 .details a{
     padding: 10px 20px;
-    background: #303f9f;
+    background: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--buttons-font-color);
     font-size: 12px;
     border-radius: 12px;
     cursor: pointer;
@@ -151,7 +201,7 @@ nav .nav-links a.selected{
     gap: 30px;
     margin-bottom: 30px;
     padding-bottom: 30px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--main-border-color);
 }
 
 .featured .item img,
@@ -178,9 +228,9 @@ nav .nav-links a.selected{
 .featured .item .details .item-info .year-badge,
 .works-list .item .details .item-info .year-badge,
 .content .work-info .year-badge{
-    background-color: #303f9f;
+    background-color: var(--primary-color);
     padding: 2px 14px;
-    color: #fff;
+    color: var(--buttons-font-color);
     border-radius: 16px;
     font-size: 14px;
     font-weight: bold;
@@ -188,7 +238,7 @@ nav .nav-links a.selected{
 
 .featured .item .details .item-info h4,
 .works-list .item .details .item-info h4{
-    color: #8695a4;
+    color: var(--secondary-font-color);
     font-size: 18px;
 }
 
@@ -220,7 +270,7 @@ footer .socials i{
 }
 
 footer .socials i:hover{
-    color: #303f9f;
+    color: var(--primary-color);
 }
 
 footer p{
@@ -248,7 +298,7 @@ footer p{
 }
 
 .content .work-info .category{
-    color: #8695a4;
+    color: var(--secondary-font-color);
     font-size: 18px;
 }
 
@@ -277,7 +327,7 @@ footer p{
 }
 
 .content .post-list .post-item{
-    background-color: #dbedf2;
+    background-color: var(--about-background-color);
     padding: 24px;
     width: 960px;
     border-radius: 10px;
@@ -303,11 +353,11 @@ footer p{
 }
 
 .content .post-list .post-item .buttons i:hover{
-    color: #303f9f;
+    color: var(--primary-color);
 }
 
 .content .container{
-    background-color: #dbedf2;
+    background-color: var(--about-background-color);
     padding: 30px;
     display: flex;
     align-items: center;
@@ -320,6 +370,7 @@ footer p{
     width: 300px;
     height: 300px;
     border-radius: 20px;
+    justify-self: center;
 }
 
 .content .container h2{
@@ -364,7 +415,56 @@ footer p{
     font-size: 20px;
 }
 
+.scroll-top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
+#themeChanger{
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    #barContainer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    #bar {
+        display: flex;
+        height: 25px;
+        width: 80px;
+        background-color: var(--main-color);
+        border-radius: 13px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #circle{
+        height: 22px;
+        width: 22px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        margin-left: -55px;
+        transition: all ease-in-out 0.3s;
+    }
+}
 
 @media screen and (max-width: 1400px) {
     
@@ -606,3 +706,5 @@ footer p{
         display: block;
     }
 }
+
+
