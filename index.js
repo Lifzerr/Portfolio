@@ -1,6 +1,17 @@
 let btnScrollTop = document.querySelector('.scroll-top-btn');
 let btnChangeTheme = document.getElementById('themeChanger');
 
+// Mettre à jour le thème en fonction de la préférence de l'utilisateur
+let theme = localStorage.getItem('theme');
+if(theme === 'dark'){
+  changeColorsTo('dark');
+  let circle = document.getElementById('circle');
+  circle.style.marginLeft = '55px';
+  circle.classList.remove('clear');
+}
+
+
+
 // Ne faire apparaître le bouton de scroll que si c'est utile
 btnScrollTop.style.display = 'none';
 window.addEventListener('scroll', () => {
@@ -29,6 +40,9 @@ btnChangeTheme.addEventListener('click', () => {
 
     // Changer les couleurs de tous les élements
     changeColorsTo('dark');
+
+    // Enregistrer le thème dans le localStorage
+    localStorage.setItem('theme', 'dark');
   }
   else{
     circle.style.marginLeft = '-55px';
@@ -36,6 +50,9 @@ btnChangeTheme.addEventListener('click', () => {
 
     // Changer les couleurs de tous les élements
     changeColorsTo('light');
+
+    // Enregistrer le thème dans le localStorage
+    localStorage.setItem('theme', 'light');
   }
 });
 
@@ -72,3 +89,4 @@ function changeColorsTo(theme){
     root.style.setProperty('--buttons-font-color', '#000');
   }
 }
+
