@@ -76,6 +76,7 @@ function changeColorsTo(theme){
     root.style.setProperty('--main-logo-color', '#ffffff');
     root.style.setProperty('--main-border-color', '#757575');
     root.style.setProperty('--buttons-font-color', '#fff');
+    root.style.setProperty('--nav-a-color-hover', '#97c2f7')
   }
   else{
     root.style.setProperty('--primary-color', '#303f9f');
@@ -87,6 +88,7 @@ function changeColorsTo(theme){
     root.style.setProperty('--main-logo-color', '#3e3e3e');
     root.style.setProperty('--main-border-color', '#e0e0e0');
     root.style.setProperty('--buttons-font-color', '#fff');
+    root.style.setProperty('--nav-a-color-hover', '#303f9f')
   }
 }
 

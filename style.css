@@ -10,6 +10,7 @@
     --main-logo-color: #3e3e3e;
     --main-border-color: #e0e0e0;
     --buttons-font-color: #fff;
+    --nav-a-color-hover : #303f9f;
 }
 
 ::-webkit-scrollbar {
@@ -101,11 +102,12 @@ nav .nav-links{
 
 nav .nav-links a{
     transition: color 0.3s ease;
+    color: var(--font-color);
 }
 
 nav .nav-links a:hover,
 nav .nav-links a.selected{
-    color: var(--primary-color);
+    color: var(--nav-a-color-hover);
 }
 
 .main {
@@ -471,9 +473,11 @@ footer p{
         transition: all ease-in-out 0.3s;
     }
     
-    .bx{
-        color: #fff;
-    }
+    
+}
+
+.bx{
+    color: #fff;
 }
 
 @media screen and (max-width: 1400px) {
