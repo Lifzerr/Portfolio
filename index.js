@@ -41,6 +41,8 @@ btnChangeTheme.addEventListener('click', () => {
     // Changer les couleurs de tous les élements
     changeColorsTo('dark');
 
+    // Faire une transition douce pour le changement de couleur
+
     // Enregistrer le thème dans le localStorage
     localStorage.setItem('theme', 'dark');
   }
