@@ -86,7 +86,7 @@ function changeColorsTo(theme){
     root.style.setProperty('--about-background-color', '#dbedf2');
     root.style.setProperty('--main-logo-color', '#3e3e3e');
     root.style.setProperty('--main-border-color', '#e0e0e0');
-    root.style.setProperty('--buttons-font-color', '#000');
+    root.style.setProperty('--buttons-font-color', '#fff');
   }
 }
 

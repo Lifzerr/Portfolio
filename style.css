@@ -53,7 +53,7 @@ body{
 }
 
 h1, h2, h3, p, btn{
-    color: var(--buttons-font-color);
+    color: var(--font-color);
 }
 
 a{
@@ -181,6 +181,10 @@ nav .nav-links a.selected{
 
 .details h3,a{
     display: inline-block;
+}
+
+.details h3{
+    color: var(--font-color);
 }
 
 .details a{
