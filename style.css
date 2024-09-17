@@ -504,6 +504,15 @@ footer p{
     }
 }
 
+#names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
 @media screen and (max-width: 1400px) {
     
     nav{
