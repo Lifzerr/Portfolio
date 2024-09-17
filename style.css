@@ -481,6 +481,29 @@ footer p{
     color: #fff;
 }
 
+
+.skills{
+    color: var(--font-color);
+
+    #lang ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+    }
+
+    #lang li{
+        margin-left: 25px;
+        list-style-type: none;
+        margin: auto;
+
+        i{
+            font-size: 30px;
+            color: var(--font-color);
+        }
+    }
+}
+
 @media screen and (max-width: 1400px) {
     
     nav{
