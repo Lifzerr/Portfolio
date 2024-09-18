@@ -94,3 +94,33 @@ function changeColorsTo(theme){
   }
 }
 
+
+
+// Transition Input
+const inputElement = document.getElementById('inputElement');
+
+    inputElement.addEventListener('click', function (e) {
+      // Supprimer les anciens effets ripple
+      const oldRipple = this.querySelector('.ripple');
+      if (oldRipple) {
+        oldRipple.remove();
+      }
+
+      // Créer l'effet ripple
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+
+      // Calculer la position du clic
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + 'px';
+
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+
+      // Ajouter l'effet ripple à l'élément
+      this.appendChild(ripple);
+    });
