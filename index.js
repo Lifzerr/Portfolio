@@ -1,5 +1,6 @@
 let btnScrollTop = document.querySelector('.scroll-top-btn');
 let btnChangeTheme = document.getElementById('themeChanger');
+let contactWays = document.querySelectorAll('.contact-way');
 
 // Mettre à jour le thème en fonction de la préférence de l'utilisateur
 let theme = localStorage.getItem('theme');
@@ -124,3 +125,19 @@ const inputElement = document.getElementById('inputElement');
       // Ajouter l'effet ripple à l'élément
       this.appendChild(ripple);
     });
+
+
+  /* Fonction de copie des éléments de contact au clipboard */
+contactWays.forEach(e => {
+  e.addEventListener('click', () => {
+    let text = e.textContent;
+    navigator.clipboard.writeText(text);
+
+    // Afficher un message de succès
+    let successMessage = document.createElement('div');
+    successMessage.classList.add('success-message');
+    successMessage.textContent = 'Copié !';
+    document.body.appendChild(successMessage);
+
+  });
+});
