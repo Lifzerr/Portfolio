@@ -1,6 +1,5 @@
 let btnScrollTop = document.querySelector('.scroll-top-btn');
 let btnChangeTheme = document.getElementById('themeChanger');
-let contactWays = document.querySelectorAll('.contact-way');
 
 // Mettre à jour le thème en fonction de la préférence de l'utilisateur
 let theme = localStorage.getItem('theme');
@@ -96,48 +95,12 @@ function changeColorsTo(theme){
 }
 
 
+/* Fonction de copie des éléments de contact au clipboard */
+let contactWays = document.querySelectorAll('.contact-item p'); 
 
-// Transition Input
-const inputElement = document.getElementById('inputElement');
-
-    inputElement.addEventListener('click', function (e) {
-      // Supprimer les anciens effets ripple
-      const oldRipple = this.querySelector('.ripple');
-      if (oldRipple) {
-        oldRipple.remove();
-      }
-
-      // Créer l'effet ripple
-      const ripple = document.createElement('span');
-      ripple.classList.add('ripple');
-
-      // Calculer la position du clic
-      const rect = this.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      ripple.style.width = ripple.style.height = size + 'px';
-
-      const x = e.clientX - rect.left - size / 2;
-      const y = e.clientY - rect.top - size / 2;
-
-      ripple.style.left = `${x}px`;
-      ripple.style.top = `${y}px`;
-
-      // Ajouter l'effet ripple à l'élément
-      this.appendChild(ripple);
-    });
-
-
-  /* Fonction de copie des éléments de contact au clipboard */
 contactWays.forEach(e => {
   e.addEventListener('click', () => {
     let text = e.textContent;
     navigator.clipboard.writeText(text);
-
-    // Afficher un message de succès
-    let successMessage = document.createElement('div');
-    successMessage.classList.add('success-message');
-    successMessage.textContent = 'Copié !';
-    document.body.appendChild(successMessage);
-
   });
 });
