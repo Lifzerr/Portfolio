@@ -658,6 +658,7 @@ footer p {
   .content .container img {
     width: 250px;
     height: 250px;
+    object-fit: fill;
   }
 
   .content .container h2 {
